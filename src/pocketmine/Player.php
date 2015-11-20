@@ -778,7 +778,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 			])
 		));
 		if(\strlen(\trim($ev->getJoinMessage())) > 0){
-			$this->server->broadcastMessage($ev->getJoinMessage());
+//			$this->server->broadcastMessage($ev->getJoinMessage());
 		}
 
 		$this->noDamageTicks = 60;
@@ -3155,7 +3155,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 			$this->loggedIn = \false;
 
 			if(isset($ev) and $this->username != "" and $this->spawned !== \false and $ev->getQuitMessage() != ""){
-				$this->server->broadcastMessage($ev->getQuitMessage());
+//				$this->server->broadcastMessage($ev->getQuitMessage());
 			}
 
 			$this->server->getPluginManager()->unsubscribeFromPermission(Server::BROADCAST_CHANNEL_USERS, $this);
